@@ -9824,10 +9824,10 @@ stop-iteration-iterator@^1.0.0:
   dependencies:
     internal-slot "^1.0.4"
 
-stream-chat-react@^11.5.0:
-  version "11.5.0"
-  resolved "https://registry.yarnpkg.com/stream-chat-react/-/stream-chat-react-11.5.0.tgz#338d94991b141d0002b278e0d309964b691cbe0b"
-  integrity sha512-duHAd4/7/OLNHLKi/HbKmcLXIRKrTngjghD+4QLdDMUwrqgpiPVvRJBQahrAG83LM44SiF2jXn0bf6jS1Gko1w==
+stream-chat-react@^11.7.0:
+  version "11.7.0"
+  resolved "https://registry.yarnpkg.com/stream-chat-react/-/stream-chat-react-11.7.0.tgz#1390c0697a24348455086502aad0927fa0477a92"
+  integrity sha512-BQJeqMvS5yfQavEvG69gaHqhjFkFNkyWe1r/CUXI6ENf4Yp4nMA5ZyDG8p67d0YabJ4pJWwqv1MKRJ/oV/7qIQ==
   dependencies:
     "@babel/runtime" "^7.23.6"
     "@braintree/sanitize-url" "^6.0.4"
