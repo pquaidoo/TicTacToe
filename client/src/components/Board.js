@@ -14,6 +14,7 @@ function Board({ result, setResult }) {
     checkIfTie();
     checkWin();
   }, [board]);
+  
   const chooseSquare = async (square) => {
     if (turn === player && board[square] === "") {
       setTurn(player === "X" ? "O" : "X");
