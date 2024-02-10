@@ -1,140 +1,153 @@
+/* Importing the font */
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap');
+
+/* Global styles */
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Comic Neue', cursive, sans-serif; /* Cute bubbly font */
+  background-color: #e3d7f5; /* Light pastel purple background */
+  color: #4d4d4d; /* Dark brown font color */
+}
+
+/* Game container */
 .gameContainer {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    column-count: 2;
-    column-gap: 100px;
-  }
-  
-  .str-chat__list {
-    background-color: white;
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
-    padding: 5px;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-count: 2;
+  column-gap: 50px; /* Increased gap between columns */
+  background-color: #b5a3d9; /* Light pastel purple */
+}
+
+.input-container {
+  margin-bottom: 20px; /* Add margin to the bottom */
+}
+
+.str-chat__list-notifications {
+  margin-top: 50px;
+}
+
+/* Chat list styles */
+.str-chat__list {
+    background-color: #dac1f0; /* Lighter pastel purple background */
+    border-radius: 10px; /* Rounded corners */
+    padding: 10px;
+    list-style-type: none; /* Remove bullet points */
     height: 300px;
     width: 300px;
     overflow: hidden;
     overflow-y: scroll;
+    margin-right: 20px; /* Increased margin between chat containers */
   }
-  
-  .str-chat__list ul {
+
+/* Override default chat message list styles */
+.str-chat__list ul {
     list-style-type: none;
-    margin: 5px;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  .str-chat__list li {
-    list-style-type: none;
-    background-color: lightgrey;
-    margin-top: 10px;
-    border-radius: 6px;
-    display: flex;
-    align-items: center;
-  }
-  
-  .str-chat__list .str-chat__message-simple-status {
-    display: none;
-  }
-  
-  .str-chat__list .str-chat__avatar {
-    display: none;
-  }
-  
-  .str-chat__message-text-inner {
-    font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    padding-left: 5px;
-  }
-  
-  .str-chat__message-data {
-    margin-bottom: 20px;
-  }
-  .str-chat__message-data span {
-    margin-left: 5px;
-  }
-  
-  .str-chat__message-data time {
-    margin-left: 5px;
-  }
-  
-  .str-chat__input-flat {
-    width: 310px;
-    height: 200px;
-    background-color: lightgrey;
-    border-bottom-left-radius: 6px;
-    border-bottom-right-radius: 6px;
-  }
-  
-  .str-chat__input-flat-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-  }
-  
-  .str-chat__input-flat-wrapper textarea {
-    resize: none;
-    width: 200px;
-    height: 90px;
-    border: none;
-    border-radius: 6px;
-    box-shadow: 0 0 0 1px black;
-    padding: 10px;
-    font-size: 15px;
-  }
-  
-  .str-chat__message-simple__actions {
-    width: 100%;
-    padding-left: 5px;
-    margin-top: 5px;
-  }
-  .str-chat__message-simple__actions__action--reactions {
-    display: flex;
-    align-items: center;
-    width: fit-content;
-    background: #ffffff;
-    border: 1px solid #e9e9ea;
-    box-sizing: border-box;
-    border-radius: 50vw;
-    padding: 6px 6px 4px 6px;
-    z-index: 3;
-    cursor: pointer;
-  }
-  
-  .str-chat__message-reactions-list {
-    display: flex;
-  }
-  
-  .str-chat__reaction-list--counter {
-    display: none;
-  }
-  .str-chat__reaction-list--reverse button {
-    margin-left: 10px;
-    border: none;
-    background-color: transparent;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .str-chat__message-reactions-list-item {
-    margin-left: 10px;
-    border: none;
-    border-radius: 50vw;
-    width: 30px;
-    height: 30px;
-  }
-  .str-chat__message-reactions-list-item span {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-  }
-  
-  .emoji-mart-emoji-custom span {
-    height: 15px !important;
-    width: 15px !important;
-  }
+    margin: 0;
+  }  
+
+/* Drag and drop section styles */
+.rfu-dropzone__inner {
+  margin-top: 20px; /* Add margin to the top */
+  border: 2px dashed #8c8c70; /* Brown */
+  border-radius: 6px;
+  padding: 20px;
+  text-align: center;
+  font-family: 'Comic Neue', cursive, sans-serif; /* Bubbly font */
+  color: #704ca6; /* Pastel purple */
+}
+
+.rfu-dropzone__inner svg {
+  width: 50px;
+  height: 50px;
+  fill: #8c8c70; /* Brown */
+}
+
+/* Textarea styles */
+.str-chat__textarea textarea {
+  resize: none;
+  width: calc(100% - 10px);
+  height: 90px;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 0 0 0 1px black;
+  padding: 10px;
+  font-size: 15px;
+  font-family: 'Comic Neue', cursive, sans-serif; /* Bubbly font */
+  color: #704ca6; /* Pastel purple */
+}
+
+/* File upload button styles */
+.rfu-file-upload-button input[type="file"] {
+  position: absolute;
+  font-size: 100px;
+  right: 0;
+  top: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.str-chat__input-flat-fileupload svg {
+  width: 14px;
+  height: 14px;
+  fill: #8c8c70; /* Brown */
+}
+
+/* Send button styles */
+.str-chat__send-button {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #8c8c70; /* Brown */
+  color: #ffffff; /* White text color */
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.str-chat__send-button svg {
+  width: 18px;
+  height: 17px;
+  fill: black; /* Blue */
+}
+
+/* Board container styles */
+.board {
+  width: 500px;
+  height: 500px;
+  background-color: #e3d7f5; /* Light pastel purple */
+  border: 1px solid #8c8c70; /* Brown */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Row styles */
+.row {
+  display: flex;
+}
+
+/* Square styles */
+.square {
+  flex: 1;
+  border: 1px solid #8c8c70; /* Brown */
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  font-size: 30px;
+  color: #704ca6; /* Pastel purple */
+  font-family: 'Comic Neue', cursive, sans-serif; /* Bubbly font */
+}
+
+/* Active square styles */
+.square:active {
+  background-color: #d9d9d9; /* Light gray */
+}
+
+/* Winner square styles */
+.square.winner {
+  color: #ffffff; /* White */
+  background-color: #8c8c70; /* Brown */
+}
