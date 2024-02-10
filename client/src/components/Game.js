@@ -27,18 +27,9 @@ function Game({ channel, setChannel }) {
         />
         <MessageInput noFiles />
       </Window>
-        {/* <button
-            className="leaveGameButton"
-            onClick={async () => {
-                await channel.stopWatching();
-                setChannel(null);
-            }}
-            >
-            Leave Game
-        </button> */}
 
-      {result.state === "won" && <div> {result.winner} Won The Game</div>}
-      {result.state === "tie" && <div> Game Tieds</div>}
+      {result.state === "won" && <div> {result.winner} Won The Game!</div>}
+      {result.state === "tie" && <div> Game Tied!</div>}
     </div>
   );
 }
